@@ -1,7 +1,9 @@
-import 'package:flutter/cupertino.dart';
+
+
+
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
+
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class Design3 extends StatefulWidget {
   const Design3({super.key});
@@ -12,7 +14,7 @@ class Design3 extends StatefulWidget {
 
 class _Design3State extends State<Design3> {
   final double profileHeight = 200;
-  final double coverHeight = 300;
+  final double coverHeight = 200;
 
   String selectButton = "1";
 
@@ -23,14 +25,14 @@ class _Design3State extends State<Design3> {
         padding: EdgeInsets.zero,
         children: <Widget>[
           Container(
-            decoration: const BoxDecoration(color: Colors.white),
+            decoration: const  BoxDecoration(color: Colors.white),
             // White background
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               // Use Column for vertical layout
               children: [
                 buildTop(),
-                const Padding(
+                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 16.0),
                   child: Center(
                       child: Text(
@@ -39,28 +41,25 @@ class _Design3State extends State<Design3> {
                       fontSize: 22,
                       fontWeight: FontWeight.w600,
                     ),
-                  )),
+                  ),
+                ),
                 ),
                 Padding(
-                  padding:  EdgeInsets.symmetric(horizontal: 16.0),
+                  padding:  const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Column(
                     children: [
-                      const Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          SizedBox(width: 100),
-                          Row(
-                            children: [
-                              Icon(Icons.star, color :Color(0xffFBDC05), size: 36,),
-                              Icon(Icons.star, color :Color(0xffFBDC05) , size: 36,),
-                              Icon(Icons.star, color :Color(0xffFBDC05), size: 36,),
-                              Icon(Icons.star, color :Color(0xffADB5BD), size: 36,),
-                              Icon(Icons.star, color :Color(0xffADB5BD), size: 36,),
-                            ],
-                          ),
-                          SizedBox(width: 100),
-                        ],
-                      ),
+                       RatingBar.builder(
+                        initialRating: 3,
+                        minRating: 0,
+                        direction: Axis.horizontal,
+                        itemCount: 5,
+                        itemPadding:const EdgeInsets.symmetric( horizontal: 4),
+                        itemBuilder: (context, index) => const Icon(
+                          Icons.star,
+                          color: Color(0xffFBDC05),), 
+                        onRatingUpdate: (rating) {
+                          
+                        }),
                       Padding(
                         padding: const EdgeInsets.only(top: 32.0),
                         child: Container(
@@ -155,7 +154,7 @@ class _Design3State extends State<Design3> {
                                   width: 59,
                                   height: 32,
                                   decoration: BoxDecoration(
-                                    color:selectButton=="3"? Color(0xff132026): Color(0xffEFF2F4),
+                                    color:selectButton=="3"? const Color(0xff132026): const Color(0xffEFF2F4),
                                     borderRadius: BorderRadius.circular(10),                           ),
                                   child:  Center(
                                     child: Text("Rs 20",
@@ -178,7 +177,7 @@ class _Design3State extends State<Design3> {
                           width: double.infinity,
                           height: 56,
                           decoration: BoxDecoration(
-                            color: Color(0xffEFF2F4),
+                            color: const Color(0xffEFF2F4),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: const Padding(
@@ -244,8 +243,8 @@ class _Design3State extends State<Design3> {
         Container(
             margin: EdgeInsets.only(bottom: 40), child: buildCoverImage()),
         Positioned(
-          top: 200, // Adjust this value as needed
-          left: 70, // Adjust this value as needed
+          top: 100, // Adjust this value as needed
+          left: 50, // Adjust this value as needed
           child: locationImage(),
         ),
         Positioned(
