@@ -46,7 +46,7 @@ class Design1 extends StatelessWidget {
                 
                 //design body content
                 const Padding(
-                  padding:  EdgeInsets.all(16.0),
+                  padding:  EdgeInsets.all(8.0),
                   child:  Text(
                     "Information",
                     style: TextStyle(
@@ -119,7 +119,7 @@ class Design1 extends StatelessWidget {
                 ),
                 const SizedBox(height: 32),
                 const Padding(
-                  padding:  EdgeInsets.all(16.0),
+                  padding:  EdgeInsets.all(8.0),
                   child:  Text(
                     "Security",
                     style: TextStyle(
@@ -193,7 +193,7 @@ class Design1 extends StatelessWidget {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const SizedBox(height: 120,),
+                    const SizedBox(height: 0,),
                     Image.asset("assets/SkyLine1.png",scale: 0.8),
                     Image.asset("assets/Home.png"),
                   ],
