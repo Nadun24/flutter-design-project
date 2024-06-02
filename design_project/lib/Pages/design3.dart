@@ -42,10 +42,25 @@ class _Design3State extends State<Design3> {
                   )),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  padding:  EdgeInsets.symmetric(horizontal: 16.0),
                   child: Column(
                     children: [
-                      Image.asset("assets/Rate.png"),
+                      const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          SizedBox(width: 100),
+                          Row(
+                            children: [
+                              Icon(Icons.star, color :Color(0xffFBDC05), size: 36,),
+                              Icon(Icons.star, color :Color(0xffFBDC05) , size: 36,),
+                              Icon(Icons.star, color :Color(0xffFBDC05), size: 36,),
+                              Icon(Icons.star, color :Color(0xffADB5BD), size: 36,),
+                              Icon(Icons.star, color :Color(0xffADB5BD), size: 36,),
+                            ],
+                          ),
+                          SizedBox(width: 100),
+                        ],
+                      ),
                       Padding(
                         padding: const EdgeInsets.only(top: 32.0),
                         child: Container(
