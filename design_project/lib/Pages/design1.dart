@@ -13,9 +13,9 @@ class Design1 extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               //app bar design
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: const Row(
+              const Padding(
+                padding:  EdgeInsets.all(16.0),
+                child:  Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
@@ -44,9 +44,9 @@ class Design1 extends StatelessWidget {
               ),
               
               //design body content
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: const Text(
+              const Padding(
+                padding:  EdgeInsets.all(16.0),
+                child:  Text(
                   "Information",
                   style: TextStyle(
                     fontSize: 16,
@@ -56,7 +56,7 @@ class Design1 extends StatelessWidget {
               ),
               const SizedBox(height: 32),
               const Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 4),
+                padding:  EdgeInsets.symmetric(horizontal: 24, vertical: 4),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -117,9 +117,9 @@ class Design1 extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 32),
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: const Text(
+              const Padding(
+                padding:  EdgeInsets.all(16.0),
+                child:  Text(
                   "Security",
                   style: TextStyle(
                     fontSize: 16,
@@ -160,7 +160,7 @@ class Design1 extends StatelessWidget {
               ),
               const SizedBox(height: 32),
               const Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 4),
+                padding:  EdgeInsets.symmetric(horizontal: 24, vertical: 4),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
